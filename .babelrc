@@ -1,6 +1,8 @@
 {
   "presets": [
     "env",
-    "minify"
+    "minify",
+    "react",
+    "es2015"
   ]
 }
