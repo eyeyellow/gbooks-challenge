@@ -1,3 +1,5 @@
+const Dotenv = require('dotenv-webpack');
+
 module.exports = {
   entry: './components/app.js',
   output: {
@@ -13,4 +15,9 @@ module.exports = {
       }
     ],
   },
+  plugins: [
+    new Dotenv({
+      path: '.env.local'
+    })
+  ]
 }
