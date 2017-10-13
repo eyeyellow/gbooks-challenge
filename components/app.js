@@ -1,19 +1,30 @@
 import ReactDOM from 'react-dom';
-import { Component } from 'react';
 import React from 'react';
+import { Component } from 'react';
 
 import SearchArea from './search_area.js'
 import ResultsArea from './results_area.js'
+
+import { fetchBooks } from '../network/fetch_books';
 
 
 window.React = React;
 window.ReactDOM = ReactDOM;
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { books: [] };
+  }
+
+  handleQuerySubmit = (query) => {
+    fetchBooks(query);
+  }
+
   render() {
     return(
       <div>
-        <SearchArea />
+        <SearchArea onQuerySubmit={this.handleQuerySubmit} />
         <ResultsArea />
       </div>  
     )
