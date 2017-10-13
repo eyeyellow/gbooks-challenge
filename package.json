@@ -21,6 +21,7 @@
     "babel-preset-react": "^6.24.1",
     "dotenv": "^4.0.0",
     "dotenv-webpack": "^1.5.4",
+    "qs": "^6.5.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "webpack": "^3.7.1"
