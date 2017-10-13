@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "build": "babel main.js -o main.min.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack -d -w --progress"
   },
   "author": "Eric Krawczyk",
   "license": "ISC",
