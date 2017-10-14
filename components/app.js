@@ -26,9 +26,11 @@ class App extends Component {
 
   render() {
     return(
-      <div>
-        <SearchArea onQuerySubmit={this.handleQuerySubmit} />
-        <ResultsArea results={this.state.books}/>
+      <div className="app">
+        <div className="container">
+          <SearchArea onQuerySubmit={this.handleQuerySubmit} />
+          <ResultsArea results={this.state.books}/>
+        </div>
       </div>  
     )
   }

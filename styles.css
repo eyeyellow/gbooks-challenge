@@ -1,3 +1,14 @@
 .error {
   color: red;
 }
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: auto;
+  border: 1px solid red;
+}
