@@ -2,6 +2,10 @@
   color: red;
 }
 
+body {
+  background-color: #81de76;
+}
+
 .app {
   display: flex;
   align-items: center;
@@ -11,14 +15,12 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: auto;
+  height: 100%;
   flex-basis: 800px;
   flex-direction: column;
-}
-
-.item {
-  justify-content: center;
+  background-color: #ffa351;
 }
 
 ul#results {
@@ -33,9 +35,6 @@ ul#results {
   height: 200px;
   border: 1px solid blue;
   margin: 10px;
-}
-
-.result-title {
 }
 
 .result-body {
