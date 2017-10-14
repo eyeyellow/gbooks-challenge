@@ -28,6 +28,6 @@ export function searchForBooks(term) {
 }
 
 // Generate HTML and sets #results's contents to it
-function render() {
-  // TODO
+export function render() {
+  console.log(this.state.books)
 }
