@@ -16,7 +16,7 @@ export function showError(msg) {
 export function searchForBooks(term) {
   const params = qs.stringify({ key: BOOKS_KEY, q: term })
   const urlWithParams = `${BOOKS_URL}?${params}`
-  var request = new Request(urlWithParams, {
+  const request = new Request(urlWithParams, {
       method: 'GET',
       mode: 'cors',
       headers: new Headers({
@@ -26,7 +26,7 @@ export function searchForBooks(term) {
   );
 
   return fetch(request).then(response => {
-    let json = response.json()
+    const json = response.json()
     if (response.ok) {
       return json
     } else {
