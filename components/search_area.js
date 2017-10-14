@@ -29,6 +29,7 @@ class SearchArea extends Component {
           id="search-bar"
           type="text"
           placeholder="Input search term here"
+          value={this.state.query}
           onChange={this.onChange}
         />
         <button onClick={this.onSubmit} id="search-btn">
