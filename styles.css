@@ -9,6 +9,31 @@
 }
 
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
+  flex-basis: 800px;
   border: 1px solid red;
+  flex-direction: column;
+}
+
+.item {
+  justify-content: center;
+}
+
+ul#results {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.result {
+  width: 770px;
+  height: 200px;
+  border: 1px solid blue;
+  margin: 10px;
 }

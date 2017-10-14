@@ -1,7 +1,6 @@
 
 const Result = ({ book }) => (
-  <div>
-    {book.volumeInfo.title}
+  <div className="result">
   </div>
 );
 
