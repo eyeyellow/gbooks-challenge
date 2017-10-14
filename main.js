@@ -1,4 +1,7 @@
 import qs from 'qs';
+import ReactDOM from 'react-dom';
+
+import Result from './components/result.js'
 
 const BOOKS_URL = 'https://www.googleapis.com/books/v1/volumes';
 const BOOKS_KEY = process.env.BOOKS_KEY;
@@ -29,5 +32,10 @@ export function searchForBooks(term) {
 
 // Generate HTML and sets #results's contents to it
 export function render() {
-  console.log(this.state.books)
+  this.state.books.forEach((book) => {
+    let newItem = document.createElement('li');
+    newItem.setAttribute("id", book.id)
+    document.querySelector('#results').appendChild(newItem)
+    ReactDOM.render(<Result book={book} />, document.getElementById(book.id));
+  })
 }
