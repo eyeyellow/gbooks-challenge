@@ -30,7 +30,7 @@ export function searchForBooks(term) {
     if (response.ok) {
       return json
     } else {
-      return json.then(err => Promise.reject(err))
+      return json.then(response => Promise.reject(response.error))
     }
   });
 }
