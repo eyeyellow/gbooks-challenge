@@ -5,7 +5,7 @@ import { Component } from 'react';
 import SearchArea from './search_area.js'
 import ResultsArea from './results_area.js'
 
-import { searchForBooks, render } from '../main.js';
+import { searchForBooks, render, showError } from '../main.js';
 
 
 window.React = React;
@@ -21,7 +21,7 @@ class App extends Component {
   handleQuerySubmit = (query) => {
     searchForBooks(query).then(data => {
       this.setState({ books: data.items }, () => this.renderResults())
-    });
+    }).catch(error => showError(error.message));
   }
 
   render() {

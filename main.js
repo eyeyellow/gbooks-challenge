@@ -7,7 +7,7 @@ const BOOKS_URL = 'https://www.googleapis.com/books/v1/volumes';
 const BOOKS_KEY = process.env.BOOKS_KEY;
 
 // Renders an error message
-function showError(msg) {
+export function showError(msg) {
   const html = `<li><p class="error">${msg}</p></li>`;
   document.querySelector('#results').innerHTML = html;
 }
@@ -26,7 +26,12 @@ export function searchForBooks(term) {
   );
 
   return fetch(request).then(response => {
-    return response.json()
+    let json = response.json()
+    if (response.ok) {
+      return json
+    } else {
+      return json.then(err => Promise.reject(err))
+    }
   });
 }
 
