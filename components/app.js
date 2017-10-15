@@ -21,17 +21,19 @@ class App extends Component {
     this.renderResults = this.props.renderResults.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.setState({ books: exampleResults.items }, () => this.renderResults())
-  // resizeContainer();
-  // }
+  componentDidMount() {
+    this.setState({ books: exampleResults.items }, () => {
+      this.renderResults()
+      resizeContainer(this.state.books.length);
+    })
+  }
 
   handleQuerySubmit = (query) => {
     searchForBooks(query).then(({ items }) => {
       const books = uniqBooksById(this.state.books, items)
       this.setState({ books }, () => {
         this.renderResults()
-        resizeContainer();
+        resizeContainer(this.state.books.length);
       })
     }).catch(error => showError(error.message));
   }
