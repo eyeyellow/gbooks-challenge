@@ -24,11 +24,10 @@ class SearchArea extends Component {
 
   render() {
     return(
-      <div id="search-area" className="item">
+      <div id="search-bar" className="item">
         <input
-          id="search-bar"
+          id="search-term"
           type="text"
-          placeholder="Input search term here"
           value={this.state.query}
           onChange={this.onChange}
         />

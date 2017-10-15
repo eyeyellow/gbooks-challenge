@@ -1,6 +1,6 @@
 export function resizeContainer(newLength) {
   const container = document.querySelector('.container')
-  container.style.height = `${(100 + (newLength * 212))}px`
+  container.style.height = `${(215 + (newLength * 212))}px`
 }
 
 export function uniqBooksById(currentBooks, newBooks) {

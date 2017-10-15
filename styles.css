@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #81de76;
+  background-color: #36c781;
 }
 
 .app {
@@ -17,10 +17,50 @@ body {
   align-items: center;
   justify-content: flex-start;
   width: auto;
-  height: 100px;
+  height: 300px;
   flex-basis: 800px;
   flex-direction: column;
-  background-color: #ffa351;
+  background-color: #ff6d6d;
+}
+
+#app-title {
+  font-family: 'Special Elite', cursive;
+  color: #ffffff;
+  font-size: 2em;
+}
+
+#search-bar {
+  width: 400px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  border: 3px solid #3cafc7;
+  border-radius: 5px;
+}
+
+#search-term {
+  float: left;
+  width: 100%;
+  font-size: 30px;
+  padding: 5px;
+  height: 40px;
+  outline: none;
+  color: #36c781;
+}
+
+#search-term:focus {
+  color: #3cafc7;
+}
+
+#search-btn {
+  width: 120px;
+  height: 40px;
+  border: 1px solid #3cafc7;
+  background: #3cafc7;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 30px;
 }
 
 ul#results {

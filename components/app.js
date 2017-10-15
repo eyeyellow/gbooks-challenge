@@ -42,8 +42,8 @@ class App extends Component {
     return(
       <div className="app">
         <div className="container">
-          <div id="app-title" className="item">
-            <h2>Search for a book</h2>
+          <div id="app-title">
+            <h1>Search for a book</h1>
           </div>
           <SearchArea onQuerySubmit={this.handleQuerySubmit} />
           <ResultsArea />
