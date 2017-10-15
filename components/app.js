@@ -6,7 +6,10 @@ import SearchArea from './search_area.js'
 import ResultsArea from './results_area.js'
 
 import { searchForBooks, render, showError } from '../main.js';
-import { resizeContainer } from '../util.js'
+import { resizeContainer, uniqBooksById } from '../util.js'
+
+// import exampleResults from '../example_results.js';
+
 
 window.React = React;
 window.ReactDOM = ReactDOM;
@@ -18,9 +21,15 @@ class App extends Component {
     this.renderResults = this.props.renderResults.bind(this);
   }
 
+  // componentDidMount() {
+  //   this.setState({ books: exampleResults.items }, () => this.renderResults())
+  // resizeContainer();
+  // }
+
   handleQuerySubmit = (query) => {
-    searchForBooks(query).then(data => {
-      this.setState({ books: data.items }, () => {
+    searchForBooks(query).then(({ items }) => {
+      const books = uniqBooksById(this.state.books, items)
+      this.setState({ books }, () => {
         this.renderResults()
         resizeContainer();
       })
@@ -35,7 +44,7 @@ class App extends Component {
             <h2>Search for a book</h2>
           </div>
           <SearchArea onQuerySubmit={this.handleQuerySubmit} />
-          <ResultsArea results={this.state.books}/>
+          <ResultsArea />
         </div>
       </div>  
     )
