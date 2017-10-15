@@ -6,7 +6,7 @@ import SearchArea from './search_area.js'
 import ResultsArea from './results_area.js'
 
 import { searchForBooks, render, showError } from '../main.js';
-
+import { resizeContainer } from '../util.js'
 
 window.React = React;
 window.ReactDOM = ReactDOM;
@@ -20,7 +20,10 @@ class App extends Component {
 
   handleQuerySubmit = (query) => {
     searchForBooks(query).then(data => {
-      this.setState({ books: data.items }, () => this.renderResults())
+      this.setState({ books: data.items }, () => {
+        this.renderResults()
+        resizeContainer();
+      })
     }).catch(error => showError(error.message));
   }
 
