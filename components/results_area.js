@@ -1,6 +1,6 @@
 
 const ResultsArea = () => (
-  <div id="results-area" className="item">
+  <div id="results-area">
     <ul id="results"></ul>
   </div>
 );

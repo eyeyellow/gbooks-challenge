@@ -24,7 +24,7 @@ class SearchArea extends Component {
 
   render() {
     return(
-      <div id="search-bar" className="item">
+      <div id="search-bar">
         <input
           id="search-term"
           type="text"
