@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #81de76;
+  background-color: #36c781;
 }
 
 .app {
@@ -20,7 +20,11 @@ body {
   height: 100px;
   flex-basis: 800px;
   flex-direction: column;
-  background-color: #ffa351;
+  background-color: #ff6d6d;
+}
+
+#app-title {
+  color: #5056a9;
 }
 
 ul#results {
