@@ -12,7 +12,7 @@ export function uniqBooksById(currentBooks, newBooks) {
   });
 };
 
-export function removeError() {
+export function removePrevError() {
   const errMsg = document.querySelector('.error')
   if (errMsg) {
     errMsg.remove();
