@@ -33,13 +33,28 @@ ul#results {
   margin: 10px 0 10px 0;
   padding: 0;
   list-style: none;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.error {
+  background-color: #f0541e;
+  border: 1px solid #b94a48;
+  border-radius: 5px;
+  text-align: center;
+  color: #800020;
+  width: 770px;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px;
 }
 
 .result {
   width: 770px;
   height: 200px;
-  border: 1px solid blue;
+  border: 1px solid #5056a9;
+  border-radius: 2px;
   margin: 10px;
+  background-color: #ffffff;
 }
 
 .result-body {

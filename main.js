@@ -8,7 +8,7 @@ const BOOKS_KEY = process.env.BOOKS_KEY;
 
 // Renders an error message
 export function showError(msg) {
-  const html = `<li><p class="error">${msg}</p></li>`;
+  const html = `<li><div class="error">${msg}</div></li>`;
   document.querySelector('#results').innerHTML = html;
 }
 
