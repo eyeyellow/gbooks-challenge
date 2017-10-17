@@ -11,3 +11,10 @@ export function uniqBooksById(currentBooks, newBooks) {
       return seen.hasOwnProperty(book.id) ? false : (seen[book.id] = true);
   });
 };
+
+export function removeError() {
+  const errMsg = document.querySelector('.error')
+  if (errMsg) {
+    errMsg.remove();
+  }
+}

@@ -6,7 +6,7 @@ import SearchArea from './search_area.js'
 import ResultsArea from './results_area.js'
 
 import { searchForBooks, render, showError } from '../main.js';
-import { resizeContainer, uniqBooksById } from '../util.js'
+import { resizeContainer, uniqBooksById, removeError } from '../util.js'
 
 window.React = React;
 window.ReactDOM = ReactDOM;
@@ -22,6 +22,7 @@ class App extends Component {
     searchForBooks(query).then(({ items }) => {
       const books = uniqBooksById(this.state.books, items);
       this.setState({ books }, () => {
+        removeError();
         this.renderResults();
         resizeContainer(books.length);
       })
