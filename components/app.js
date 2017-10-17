@@ -33,7 +33,7 @@ class App extends Component {
       <div className="app">
         <div className="container">
           <div id="app-title">
-            <h2>Search for a book</h2>
+            <h1>Search for a book</h1>
           </div>
           <SearchArea onQuerySubmit={this.handleQuerySubmit} />
           <ResultsArea results={this.state.books}/>
