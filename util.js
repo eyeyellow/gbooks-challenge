@@ -1,4 +1,3 @@
-
 export function resizeContainer(newLength) {
   const container = document.querySelector('.container')
   container.style.height = `${(105 + (newLength * 212))}px`

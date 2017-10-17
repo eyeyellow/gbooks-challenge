@@ -28,6 +28,12 @@ body {
   font-family: 'Special Elite', cursive;
 }
 
+.result-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 ul#results {
   flex-direction: column;
   margin: 10px 0 10px 0;
@@ -77,4 +83,13 @@ img.book-thumbnail {
   flex-direction: column;
   margin: 0;
   padding-left: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.book-data > i,
+.book-data > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

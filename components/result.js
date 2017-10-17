@@ -1,4 +1,3 @@
-
 const Result = ({ book }) => {
   const { title,
           imageLinks,
@@ -20,9 +19,7 @@ const Result = ({ book }) => {
           />
         </a>
         <div className="book-data">
-          <p className="book-subtitle">
-            <i>{subtitle && subtitle}</i>
-          </p>
+          <i>{subtitle && subtitle}</i>
           <p>
             {authors && `by ${authors.join(', ')}`}
           </p>
