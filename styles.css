@@ -8,6 +8,7 @@ body {
 
 .app {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -92,4 +93,13 @@ img.book-thumbnail {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media (max-width: 800px) {
+  .result {
+    width: 400;
+  }
+  .error {
+    width: 400;
+  }
 }
