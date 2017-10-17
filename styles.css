@@ -20,11 +20,11 @@ body {
   height: 100px;
   flex-basis: 800px;
   flex-direction: column;
-  background-color: #ff6d6d;
+  background-color: #3cafc7;
 }
 
 #app-title {
-  color: #5056a9;
+  color: #ffffff;
   font-family: 'Special Elite', cursive;
 }
 
