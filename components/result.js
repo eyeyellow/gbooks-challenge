@@ -3,21 +3,26 @@ const Result = ({ book }) => {
   const { title,
           imageLinks,
           subtitle,
-          authors } = book.volumeInfo
+          authors,
+          previewLink } = book.volumeInfo
   return(
     <div className="result">
-      <h2 className="result-title">
-        {title && title}
-      </h2>
+      <a href={previewLink && previewLink} target="_blank">
+        <h3 className="result-title">
+          {title && title}
+        </h3>
+      </a>
       <div className="result-body">
-        <img
-          className="book-thumbnail"
-          src={imageLinks && imageLinks.smallThumbnail && imageLinks.smallThumbnail}
-        />
+        <a href={previewLink && previewLink} target="_blank">
+          <img
+            className="book-thumbnail"
+            src={imageLinks && imageLinks.smallThumbnail && imageLinks.smallThumbnail}
+          />
+        </a>
         <div className="book-data">
-          <h3 className="book-subtitle">
-            {subtitle && subtitle}
-          </h3>
+          <p className="book-subtitle">
+            <i>{subtitle && subtitle}</i>
+          </p>
           <p>
             {authors && `by ${authors.join(', ')}`}
           </p>

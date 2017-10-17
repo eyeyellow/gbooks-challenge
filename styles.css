@@ -47,6 +47,11 @@ ul#results {
   line-height: 40px;
 }
 
+a:link {
+  text-decoration: none;
+  color: #000000;
+}
+
 .result {
   width: 770px;
   height: 200px;
