@@ -1,6 +1,13 @@
-export function resizeContainer() {
+
+export function resizeContainer(newLength) {
   const container = document.querySelector('.container')
-  const currentHeight = window.getComputedStyle(container, null).height
-  const heightValue = parseInt(currentHeight, 10)
-  container.style.height = `${(heightValue + 2120)}px`
-}
+  container.style.height = `${(100 + (newLength * 212))}px`
+};
+
+export function uniqBooksById(currentBooks, newBooks) {
+  const books = currentBooks.concat(newBooks);
+  const seen = {};
+  return books.filter(book => {
+      return seen.hasOwnProperty(book.id) ? false : (seen[book.id] = true);
+  });
+};
