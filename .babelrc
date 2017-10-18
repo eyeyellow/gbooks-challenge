@@ -1,6 +1,8 @@
 {
   "presets": [
     "env",
-    "minify"
+    "minify",
+    "react",
+    "stage-0"
   ]
 }

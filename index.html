@@ -3,18 +3,12 @@
     <title>Google Books Search Engine</title>
     <!-- fetch polyfill if your browser doesn't support fetch -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div id="search-area">
-      <input id="search-bar" type="text" placeholder="Input search term here">
-      <button id="search-btn">Search</button>
-    </div>
-    <div id="results-area">
-      <ul id="results"></ul>
-    </div>
-    <script src="main.js"></script>
-    <!-- for babel transpilation -->
-    <!-- <script src="main.min.js"></script> -->
+    <div id='app'></div>
+    <script src="public/bundle.js"></script>
   </body>
 </html>

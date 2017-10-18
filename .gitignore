@@ -3,3 +3,9 @@ npm-debug.log
 node_modules/*
 package-lock.json
 main.min.js
+
+# Ignore bundled stript
+/public/bundle.js
+
+# Ignore local environmenal variables
+.env.local
