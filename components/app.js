@@ -40,7 +40,7 @@ class App extends Component {
             <h1>Search for a book</h1>
           </div>
           <SearchArea onQuerySubmit={this.handleQuerySubmit} />
-          <ResultsArea results={this.state.books}/>
+          <ResultsArea />
         </div>
       </div>  
     )

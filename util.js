@@ -1,9 +1,9 @@
-export function resizeContainer(newLength) {
+export const = resizeContainer = (newLength) => {
   const container = document.querySelector('.container')
   container.style.height = `${(105 + (newLength * 212))}px`
 };
 
-export function uniqBooksById(currentBooks, newBooks) {
+export const = uniqBooksById = (currentBooks, newBooks) => {
   const books = currentBooks.concat(newBooks);
   const seen = {};
   return books.filter(book => {
@@ -11,9 +11,9 @@ export function uniqBooksById(currentBooks, newBooks) {
   });
 };
 
-export function removePrevError() {
+export const = removePrevError = () => {
   const errMsg = document.querySelector('.error')
   if (errMsg) {
     errMsg.remove();
   }
-}
+};
