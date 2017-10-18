@@ -47,8 +47,8 @@ export function searchForBooks(term) {
 
 // Generate HTML and sets #results's contents to it
 export function render() {
-  this.state.books.forEach((book) => {
-    let newItem = document.createElement("li");
+  this.state.books.forEach(book => {
+    let newItem = document.createElement('li');
     newItem.setAttribute('id', book.id)
     document.querySelector('#results').appendChild(newItem)
     ReactDOM.render(<Result book={book} />, document.getElementById(book.id));
